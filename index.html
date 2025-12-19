@@ -4,11 +4,75 @@
   <meta charset="utf-8">
   <title>RACCORD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background: #e50914;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .wrap {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #e50914;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #b00710;
+    }
+    footer {
+      background: #222;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenido a RACCORD</h1>
-  <p>La realidad sin extremos. Este es el inicio de nuestra app.</p>
+  <header>
+    <h1>RACCORD</h1>
+    <p>La realidad sin extremos</p>
+  </header>
 
-  <p><a href="https://sites.google.com/view/revistaraccord/portada" target="_blank">Ir a la portada</a></p>
+  <div class="wrap">
+    <h2>Bienvenido a nuestra app</h2>
+    <p>Accede rápidamente a titulares y artículos desde tu dispositivo.</p>
+
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/portada" target="_blank">Portada</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/politica" target="_blank">Política</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/cultura" target="_blank">Cultura</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/servicio" target="_blank">Servicio</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/marca" target="_blank">Marca</a>
+  </div>
+
+  <footer>
+    © 2025 RACCORD · SOZA Global Group · Todos los derechos reservados
+  </footer>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js").catch(console.error);
+    }
+  </script>
 </body>
 </html>
