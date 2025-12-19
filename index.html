@@ -19,52 +19,60 @@
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: #ffffff;
-      color: #0b1c2c;
+      background: #ffffff; /* fondo blanco */
+      color: #0b1c2c;      /* texto negro azulado */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: 9999;
     }
-    #splash h1 { font-size: 2.5em; margin: 0; }
-    #splash p { font-size: 1.2em; margin-top: 10px; }
-
-    /* Portada */
-    header {
-      padding: 20px;
-      font-weight: bold;
+    #splash h1 {
+      font-size: 2.5em;
+      margin: 0;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      max-width: 600px;
-      margin: 40px auto;
-    }
-    .block {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 150px;
-      color: #000000;
-      font-size: 3em;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .block span {
-      font-size: 1em;
+    #splash p {
+      font-size: 1.2em;
       margin-top: 10px;
     }
-    .politica { background: #b22222; }   /* rojo oscuro */
-    .cultura { background: #1e90ff; }    /* azul */
-    .servicios { background: #daa520; }  /* amarillo mostaza */
-    .marca { background: #4682b4; }      /* azul acero */
+    header {
+      background: #0b1c2c; /* barra superior en negro azulado */
+      padding: 30px 20px;
+      color: #ffffff;      /* texto blanco */
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: 700;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+      font-weight: 400;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 12px;
+      padding: 14px 24px;
+      background: #ffffff; /* botón blanco */
+      color: #0b1c2c;      /* texto negro azulado */
+      text-decoration: none;
+      border: 2px solid #0b1c2c;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: #0b1c2c; /* negro azulado al pasar el cursor */
+      color: #ffffff;      /* texto blanco */
+    }
     footer {
-      background: #f0f0f0;
+      background: #f0f0f0; /* gris claro */
       padding: 20px;
       margin-top: 40px;
       font-size: 0.9em;
@@ -79,24 +87,20 @@
     <p>La realidad sin extremos</p>
   </div>
 
-  <!-- Portada institucional -->
   <header>
-    <h2>INDEPENDIENTE DESDE 2020</h2>
+    <h1>RACCORD</h1>
+    <p>La realidad sin extremos</p>
   </header>
 
-  <div class="grid">
-    <a class="block politica" href="https://sites.google.com/view/revistaraccord/pol%C3%ADtica" target="_blank">
-      P <span>Política</span>
-    </a>
-    <a class="block cultura" href="https://sites.google.com/view/revistaraccord/cultura" target="_blank">
-      C <span>Cultura</span>
-    </a>
-    <a class="block servicios" href="https://sites.google.com/view/revistaraccord/servicio" target="_blank">
-      S <span>Servicios</span>
-    </a>
-    <a class="block marca" href="https://sites.google.com/view/revistaraccord/marca" target="_blank">
-      M <span>Marca</span>
-    </a>
+  <div class="wrap">
+    <h2>Bienvenido a nuestra app</h2>
+    <p>Accede rápidamente a titulares y artículos desde tu dispositivo.</p>
+
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/portada" target="_blank">Portada</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/pol%C3%ADtica" target="_blank">Política</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/cultura" target="_blank">Cultura</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/servicio" target="_blank">Servicios</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/marca" target="_blank">Marca</a>
   </div>
 
   <footer>
