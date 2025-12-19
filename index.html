@@ -10,12 +10,12 @@
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
-      background: #f5f5dc; /* crema */
-      color: #111;
+      background: #0b1c2c; /* negro azulado */
+      color: #fff;
       text-align: center;
     }
     header {
-      background: #0b1c2c; /* negro azulado */
+      background: #111; /* negro institucional */
       padding: 30px 20px;
       color: #fff;
     }
@@ -79,3 +79,11 @@
   <footer>
     © 2025 RACCORD · SOZA Global Group · Todos los derechos reservados
   </footer>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js").catch(console.error);
+    }
+  </script>
+</body>
+</html>
