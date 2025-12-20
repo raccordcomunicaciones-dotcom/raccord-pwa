@@ -5,7 +5,7 @@
   <title>RACCORD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Vinculación del manifest -->
+  <!-- Manifest -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0b1c2c">
 
@@ -20,22 +20,6 @@
       color: #0b1c2c;
       text-align: center;
     }
-    /* Splash screen */
-    #splash {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: #ffffff;
-      color: #0b1c2c;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    #splash h1 { font-size: 2.5em; margin: 0; }
-    #splash p { font-size: 1.2em; margin-top: 10px; }
-
     header {
       background: #0b1c2c;
       padding: 30px 20px;
@@ -67,14 +51,19 @@
     }
     #installBtn {
       display: none;
-      margin: 20px;
-      padding: 14px 24px;
+      margin: 30px auto;
+      padding: 16px 28px;
       background: #0b1c2c;
       color: #ffffff;
       border: none;
-      border-radius: 8px;
-      font-size: 1em;
+      border-radius: 10px;
+      font-size: 1.1em;
+      font-weight: bold;
       cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #installBtn:hover {
+      background: #142f47;
     }
     footer {
       background: #f0f0f0;
@@ -86,12 +75,6 @@
   </style>
 </head>
 <body>
-  <!-- Splash institucional -->
-  <div id="splash">
-    <h1>RACCORD</h1>
-    <p>La realidad sin extremos</p>
-  </div>
-
   <header>
     <h1>RACCORD</h1>
     <p>La realidad sin extremos</p>
@@ -101,14 +84,15 @@
     <h2>Bienvenido a nuestra app</h2>
     <p>Accede rápidamente a titulares y artículos desde tu dispositivo.</p>
 
-    <a class="btn" href="https://sites.google.com/view/revistaraccord/portada" target="_blank">Portada</a>
-    <a class="btn" href="https://sites.google.com/view/revistaraccord/pol%C3%ADtica" target="_blank">Política</a>
-    <a class="btn" href="https://sites.google.com/view/revistaraccord/cultura" target="_blank">Cultura</a>
-    <a class="btn" href="https://sites.google.com/view/revistaraccord/servicio" target="_blank">Servicios</a>
-    <a class="btn" href="https://sites.google.com/view/revistaraccord/marca" target="_blank">Marca</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/portada" target="_blank">Portada 📰</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/pol%C3%ADtica" target="_blank">Política 🏛️</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/cultura" target="_blank">Cultura 🎭</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/servicio" target="_blank">Servicios ⚙️</a>
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/marca" target="_blank">Marca ✒️</a>
+    <!-- Nuevo botón Educación -->
+    <a class="btn" href="https://sites.google.com/view/revistaraccord/educaci%C3%B3n" target="_blank">Educación 📚</a>
 
-    <!-- Botón de instalación -->
-    <button id="installBtn">Instalar RACCORD</button>
+    <button id="installBtn">📲 Instalar RACCORD</button>
   </div>
 
   <footer>
@@ -116,13 +100,6 @@
   </footer>
 
   <script>
-    // Oculta el splash después de 1.5 segundos
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.getElementById("splash").style.display = "none";
-      }, 1500);
-    });
-
     // Registrar service worker
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js").catch(console.error);
